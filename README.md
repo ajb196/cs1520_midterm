@@ -1,4 +1,3 @@
-# personal-webpage
-The code for my webpage.
+# cs1520_midterm
 
-Simple repository meant to hold my webpage.
+Simple repository to hold midterm project for cs1520
