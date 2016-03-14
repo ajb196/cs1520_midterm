@@ -1,0 +1,71 @@
+/*force width*/
+nav {
+	width:100%;
+	z-index:100000000;
+}
+
+/*styles for both navs*/
+.navbar-nav {
+	a:hover {
+		background-color:$black !important;
+		color:$green;
+	}
+
+	a:focus {
+		background-color:$black !important;
+		color:$cream;
+
+		&:hover {
+			background-color:$black !important;
+			color:$green;
+		}
+	}
+
+	li:active{
+		color:$cream !important;
+	}
+}
+
+/*standard nav*/
+.navbar-custom {
+	border-radius:0px !important;
+	border-bottom:2px solid $green !important;
+	background-color:$black;
+	margin-left:-10px;
+
+	a{
+		color:$cream;
+
+		&:focus {
+			color:$cream;
+		}
+
+		&:hover {
+			color:$green;
+		}
+	}
+}
+
+
+/*parallax nav*/
+.navbar-trans {
+	left:50%;
+	right:50%;
+	color:#000;
+
+	a {
+		color:#000;
+		text-decoration:none;
+		font-size:1.2em;
+
+		&:focus {
+			background-color:transparent !important;
+			color:#000;
+		}
+		
+	}
+
+	.navbar-nav {
+		width:100%;
+	}
+}

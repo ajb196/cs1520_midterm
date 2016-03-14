@@ -1,0 +1,578 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html, button, input, select, textarea {
+  color: #222; }
+
+body {
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1; }
+
+/* ==========================================================================
+   Parallax Scroll
+   ========================================================================== */
+body, html {
+  height: 100%;
+  min-height: 100%;
+  background-color: #3B3738; }
+
+body {
+  color: #3B3738; }
+
+.no-js {
+  padding-top: 106px; }
+
+h2 {
+  margin-top: 0; }
+
+.loading {
+  background: url("../img/ico_loading.gif") no-repeat center center; }
+
+section {
+  min-width: 960px;
+  opacity: 0; }
+
+.affix {
+  top: 0;
+  width: 100%; }
+
+.affix + .container-fluid {
+  padding-top: 70px; }
+
+.loaded section, .no-js section {
+  opacity: 1;
+  -webkit-transition: opacity 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out;
+  transition: opacity 300ms ease-out; }
+
+main {
+  overflow-x: hidden; }
+
+#preload {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0; }
+
+.bcg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 100%;
+  width: 100%; }
+
+.hsContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+.hsContent {
+  max-width: 700px;
+  position: absolute;
+  left: 50%;
+  top: 50%; }
+.hsContent h2 {
+  color: #000;
+  /*background-color: rgba(0,0,0,0.5);*/
+  padding: 10px 5px;
+  font-size: 35px;
+  line-height: 38px;
+  margin-bottom: 12px; }
+.hsContent p {
+  width: 400px;
+  color: #b2b2b2; }
+.hsContent a {
+  color: #b2b2b2;
+  text-decoration: underline; }
+
+.slide {
+  background-color: #FDF3E7;
+  border-left: 10px solid #7E8F7C;
+  border-right: 10px solid #7E8F7C; }
+
+/* Slide 1 */
+#splash .bcg {
+  background-image: url("../img/dramatic.jpg"); }
+#splash .hsContent {
+  margin-left: -450px;
+  top: auto; }
+#splash h2 {
+  position: fixed;
+  font-size: 2em; }
+#splash img {
+  position: fixed;
+  height: 30px;
+  width: 30px; }
+#splash img:hover {
+  opacity: 1 !important; }
+#splash #title {
+  top: 15%;
+  left: 30%;
+  font-size: 3em; }
+#splash #sub1 {
+  top: 150px;
+  left: 35%; }
+#splash #sub2 {
+  top: 180px;
+  left: 35%; }
+#splash #sub3 {
+  top: 210px;
+  left: 35%; }
+#splash #linkedin {
+  bottom: 15px;
+  left: 20px; }
+#splash #twitter {
+  bottom: 15px;
+  left: 55px; }
+#splash #facebook {
+  bottom: 15px;
+  left: 90px; }
+
+#bg1 {
+  height: 300px; }
+#bg1 .bcg {
+  background-image: url("../img/bg1.jpg"); }
+
+#bg2 {
+  height: 300px; }
+#bg2 .bcg {
+  background-image: url("../img/bg2.jpg"); }
+
+#resume, #bio, #contact {
+  background-color: #C63D0F;
+  padding-top: 20px;
+  color: #3B3738; }
+
+#list .bcg {
+  background-image: url("../img/tower.jpg"); }
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html, button, input, select, textarea {
+  color: #222; }
+
+body {
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 150%; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1; }
+
+/*# sourceMappingURL=normalize.scss.map */
+/*force width*/
+nav {
+  width: 100%;
+  z-index: 100000000; }
+
+/*styles for both navs*/
+.navbar-nav a:hover {
+  background-color: #3B3738 !important;
+  color: #7E8F7C; }
+.navbar-nav a:focus {
+  background-color: #3B3738 !important;
+  color: #FDF3E7; }
+.navbar-nav a:focus:hover {
+  background-color: #3B3738 !important;
+  color: #7E8F7C; }
+.navbar-nav li:active {
+  color: #FDF3E7 !important; }
+
+/*standard nav*/
+.navbar-custom {
+  border-radius: 0px !important;
+  border-bottom: 2px solid #7E8F7C !important;
+  background-color: #3B3738;
+  margin-left: -10px; }
+.navbar-custom a {
+  color: #FDF3E7; }
+.navbar-custom a:focus {
+  color: #FDF3E7; }
+.navbar-custom a:hover {
+  color: #7E8F7C; }
+
+/*parallax nav*/
+.navbar-trans {
+  left: 50%;
+  right: 50%;
+  color: #000; }
+.navbar-trans a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.2em; }
+.navbar-trans a:focus {
+  background-color: transparent !important;
+  color: #000; }
+.navbar-trans .navbar-nav {
+  width: 100%; }
+
+@font-face {
+  font-family: Brandon;
+  src: url(fonts/Brandon_med.otf); }
+body {
+  font-family: Brandon; }
+
+footer {
+  border-left: 10px solid #7E8F7C;
+  border-right: 10px solid #7E8F7C;
+  color: #FDF3E7;
+  font-size: .7em;
+  padding: 3px;
+  text-align: center; }
+
+.alignRight {
+  text-align: right; }
+
+.break {
+  width: 100%;
+  height: 10px;
+  background-color: #7E8F7C; }
+
+.row {
+  margin-top: 10px;
+  margin-bottom: 10px; }
+
+.shadow {
+  box-shadow: 0px 0px 25px; }
+
+.paper {
+  background-color: #FDF3E7;
+  padding: 20px 30px 20px 30px;
+  margin-bottom: 20px; }
+
+#bioContent {
+  border: 2px solid #C63D0F;
+  padding: 10px; }
+
+/*
+
+	Resume Styling
+
+*/
+#resumeName {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 0.9em; }
+
+#resumeHead {
+  border-top: 1pt solid black;
+  border-bottom: 1pt solid black;
+  font-style: italic; }
+
+#resumeBody {
+  margin-top: 15px;
+  background-color: #FDF3E7; }
+
+.resumeSectionHead {
+  font-weight: bold;
+  font-size: 1.3em; }
+
+#resumeFoot {
+  border-top: 1pt solid black; }
+
+.sides {
+  position: fixed;
+  width: 10px;
+  height: 100%;
+  background-color: #7E8F7C; }
+.sides .left {
+  left: 0px; }
+.sides .right {
+  right: 0px; }
+
+.listContent {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  border: 2px solid #3B3738;
+  background-color: #FDF3E7;
+  padding: 20px;
+  font-size: 1.2em; }
+
+.secHead {
+  color: #C63D0F;
+  text-align: center;
+  margin-top: 0px; }
+
+.complete {
+  text-decoration: line-through;
+  color: #7E8F7C; }
+
+.red {
+  color: #C63D0F; }
+
+/*# sourceMappingURL=main.css.map */

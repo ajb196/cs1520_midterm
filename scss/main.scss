@@ -1,0 +1,150 @@
+$black:	#3B3738;
+$red: 	#C63D0F;
+$cream:	#FDF3E7;
+$green: #7E8F7C;
+
+
+@import 'boilerplate';
+@import 'parallax';
+@import 'normalize';
+@import 'nav';
+
+@font-face {
+    font-family: Brandon;
+    src: url(fonts/Brandon_med.otf);
+}
+
+body {
+	font-family: Brandon;
+}
+
+footer {
+	border-left:10px solid $green;
+	border-right:10px solid $green;
+	color:$cream;
+	font-size: .7em;
+	padding:3px;
+	text-align: center;
+}
+
+.alignRight {
+	text-align: right;
+}
+
+.break {
+	width:100%;
+	height:10px;
+	background-color: $green;
+}
+
+.row {
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+.shadow {
+
+	box-shadow:0px 0px 25px;
+
+}
+
+.paper {
+
+	background-color:$cream;
+
+	padding:20px 30px 20px 30px;
+
+	margin-bottom:20px;
+
+}
+
+#bioContent {
+	border:2px solid $red;
+	padding:10px;
+}
+
+
+/*
+
+	Resume Styling
+
+*/
+#resumeName {
+
+	font-weight:bold;
+
+	font-size:1.3em;
+
+	margin-bottom:0.9em;
+
+}
+
+#resumeHead {
+
+	border-top: 1pt solid black;
+
+	border-bottom: 1pt solid black;
+
+	font-style: italic;
+
+}
+
+#resumeBody {
+
+	margin-top:15px;
+	background-color:$cream;
+
+}
+
+.resumeSectionHead {
+
+	font-weight: bold;
+
+	font-size:1.3em;
+
+}
+
+#resumeFoot {
+
+	border-top: 1pt solid black;
+
+}
+
+.sides{
+	position:fixed;
+	width:10px;
+	height:100%;
+	background-color:$green;
+	
+	.left {
+		left:0px;
+	}
+
+	.right {
+		right:0px;
+	}
+}
+
+.listContent {
+	margin-top:50px;
+	margin-bottom:50px;
+	border:2px solid $black;
+	background-color:$cream;
+	padding:20px;
+	font-size: 1.2em;
+}
+
+.secHead {
+	color:$red;
+	text-align:center;
+	margin-top:0px;
+}
+
+.complete {
+	text-decoration:line-through;
+	color:$green;
+}
+
+.red {
+	color:$red;
+}
